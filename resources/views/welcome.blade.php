@@ -91,13 +91,20 @@
     <main>
         <!-- Search Form -->
         <form method="GET" action="{{ route('search') }}" class="mb-4">
-            <div class="row g-3">
-                <div class="col-md-10">
-                    <input type="text" name="keyword" class="form-control" placeholder="Search news by keyword"
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" name="keyword" class="form-control" placeholder="Search by headline"
                         value="{{ request('keyword') }}">
                 </div>
+                <div class="col-md-3">
+                    <input type="text" name="author" class="form-control" placeholder="Search by author"
+                        value="{{ request('author') }}">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" name="date" class="form-control" value="{{ request('date') }}">
+                </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </div>
         </form>

@@ -5,11 +5,18 @@
         </h2>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden">
-                    <div class="p-6 text-gray-900">
-                        <p class="mt-4">{{ $news->content }}</p>
-                        <p class="text-muted mt-4"><small>Author: {{ $news->author }}</small></p>
-                        <p class="text-muted"><small>Date Published: {{ $news->date_published }}</small></p>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <!-- News Content -->
+                        <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                            {{ $news->content }}
+                        </p>
+    
+                        <!-- Author and Date Published -->
+                        <div class="mt-6 text-gray-500">
+                            <p><strong>Author:</strong> {{ $news->author }}</p>
+                            <p><strong>Date Published:</strong> {{ $news->date_published }}</p>
+                        </div>
                     </div>
                 </div>
             </div>

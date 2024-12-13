@@ -2,7 +2,11 @@
 
 @section('content')
     <div class="container mt-4">
-        <h1 class="mb-4">Search Results</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Search Results</h1>
+            <!-- Back Button -->
+            <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm">Back</a>
+        </div>
 
         <!-- Display Results -->
         @if ($news->isEmpty())

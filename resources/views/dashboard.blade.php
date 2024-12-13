@@ -32,7 +32,7 @@
                         <div class="col-md-4 mb-4">
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <h5 class="card-title text-primary">{{ $item->headline }}</h5>
+                                    <h5 class="card-title"><strong>{{ $item->headline }}</strong></h5>
                                     <p class="card-text">{{ Str::limit($item->content, 150, '...') }}</p>
                                     <p class="text-muted mb-1">
                                         <small>Author: {{ $item->author }}</small>
